@@ -1,0 +1,13 @@
+class MyClass:
+    def process_class_name(self, obj):
+        try:
+            result1 = obj.method1(5)
+            result2 = obj.method2("hello")
+            result3 = obj.method3([1, 2, 3])
+        except MyError1 as e:
+            print(f"Error occurred: {e}")
+            return
+        except (MyError2, MyError3) as e:
+            print(f"Error occurred: {e}")
+            return
+        print(f"Results: {result1}, {result2}, {result3}")
